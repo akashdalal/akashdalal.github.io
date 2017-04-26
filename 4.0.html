@@ -1,0 +1,224 @@
+<tw-storydata name="The Quest through Elerion" startnode="21" creator="Twine" creator-version="2.1.1" ifid="1CE3D91E-A1CE-487A-B016-AE2CAB7FD1F5" format="SugarCube" format-version="2.14.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+  color:#3a1459;
+  font-family:fantasy;
+  background-color:#f7edc5;
+}
+p {
+  color:black;
+  font-family:cursive;
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+</script><tw-passagedata pid="1" name="Continue onto a nearby village." tags="Boy-Test-2" position="1600,1500">You come across a village overrun with goblins. They are burning the homes, stealing from the shops, and terrorizing the fleeing villagers. A villager sees you and begs for your help.
+
+[[Pick up a hoe dropped by one of the farmers]]
+
+[[Pick up a torch]]
+
+[[Continue on your path]]
+</tw-passagedata><tw-passagedata pid="2" name="Pick up a hoe dropped by one of the farmers" tags="" position="1400,1650">You can’t bear to see so many other beings suffer at the hand of such miserable creatures. You pick up a nearby hoe which was dropped by a farmer after being run out of his field by a goblin. You starting swinging it low and fast hitting every goblin insight. After 4 long hours of brutal battle, the goblin horde starts to diminish in size and the few remaining flee. The villagers are ecstatic in the small victory as they run towards you with glee. They thank you for your valiant fight and begin to pick up their broken villager in hopes of restoring it to its former glory.
+
+[[You receive a letter from Aria.]]</tw-passagedata><tw-passagedata pid="3" name="Pick up a torch" tags="" position="1600,1650">You can’t bear to see so many other beings suffer at the hand of such miserable creatures. You pick up a nearby flaming rafter which had fallen from the stable. You starting swinging your torch-like device attempting to hit any goblin nearby, but barely striking one. The goblin horde realizes this new attacker and begins to target you. Forty or so goblins run after you leaping and latching onto your clothes. They drag their nails across your skin and claw at your eyeballs. You bleed to death in the middle of the village. The villagers thank you for your valiant effort in the battle and give you a properly burial filled with songs, dance, and toasts of respect. </tw-passagedata><tw-passagedata pid="4" name="Continue on your path" tags="" position="1800,1650">You can think of nothing but your true love waiting for you on the other side of Elerion. You don’t realize there is a villager begging for your help. You just focus on the path at hand and continue walking, wishing your love was already by your side. 
+
+[[You receive a letter from Aria.]]
+
+&lt;&lt;set $points += 1&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="5" name="Continue through the forest." tags="Girl-Test-2" position="2400,1500">You are traveling down your path focusing on the day when you can meet with your love. You are focusing so hard on what he looks like in your mind that you barely miss the crippled, old man crouching near the bank of the river. He raises his hand as if to catch your attention. As you approach him you see the hand he beckoned you over with appears to be peeling, but you decide this was just the sun’s rays bouncing off of the river and messing with your sight. When you get near, he tells you that his village has been destroyed by a horde of goblins terrorizing the area and has been wandering around looking for food since then.
+
+[[You see the need in his eyes and decide to see how you can help. After scanning the area you make a fishing pole.]]
+
+[[Seeing this old man, you offer help by searching through the bushes.]]
+
+[[Continue on your path.]]
+</tw-passagedata><tw-passagedata pid="6" name="You see the need in his eyes and decide to see how you can help. After scanning the area you make a fishing pole." tags="" position="2200,1650">You survey the area trying to find anything with which to help this poor gentleman. You see a sturdy branch, and by pulling a thread from his cloak, you fashion a rudimentary fishing line. The man flinches when you raise the fishing pole in order to catch some food, but you think nothing of it. You sit near the river bank and talk with the man for a few hours before a fish catches hold. You drag the tread with the fish. The gentleman begins to fashion a fire from the dry moss and a couple of rocks. You prepare the fish and sit down to a lovely dinner with the man.  He tells you of tales from his adventures and the tragic story as he arrived to his village too late to save it. You thank the man for his time and approach your original path in order to continue your journey towards your love.
+
+[[You receive a letter from Elhal.]]
+</tw-passagedata><tw-passagedata pid="7" name="Seeing this old man, you offer help by searching through the bushes." tags="" position="2400,1650">After deciding to help this man, you think back to the days when you would walk through the forest with your mother in order to pick herbs for supper that night. You remember the time you found delicious mushrooms with red spots and the purple berries that tasted sweeter than honey. Using those images, you search through the forest in hopes of finding such food. As your back is turned towards the nearby bushes you hear the sound of fabric ripping and a slimy object moving. You turn quickly back around to examine what is happening as you notice the man’s clothes are now ten sizes too small and his skin is falling off of his own body. He shapeshifts into an orc and starts swinging his huge fists. You try to run but trip over a fallen branch. The orc takes advantage of the situation and grabs you by the leg, bringing you to his eye sight, and snaps you in half. He uses your lifeless body as his supper, changing back into the man, and continues about his night. </tw-passagedata><tw-passagedata pid="8" name="Continue on your path." tags="" position="2600,1650">Thinking back to the many stories of foolish women getting caught up in the thought of helping those in need, but soon after getting murdered for their help, you back away from the man offering nothing. He starts mumbling curses under his breath, but you think nothing of it and continue on your path. 
+
+[[You receive a letter from Elhal.]]
+
+&lt;&lt;set $points += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="You receive a letter from Aria." tags="" position="1300,1800">&lt;p&gt;“My dearest $name,
+		After these weeks of travel I cannot await our meeting and seeing your face for the first time. I have had a long journey making my way towards you. I stopped to help a man today. His skin was slippery like that of a fish and his eyes glistened with desire. But after filling our stomachs with a delightful dinner of fish, caught by yours truly, he was lulled to sleep and I continued my journey to you. I am propelled by the thought of seeing your beautiful eyes and finally getting to hold your hand. The man’s hand was quite weird now that I think about it. It brought forth memories from stories my mother described which told of shapeshifters. I might have narrowly avoided one. Either way, I am alive and making my way towards you. 
+
+									Your Love,
+										Aria”&lt;/p&gt;
+&lt;&lt;if $points eq 0&gt;&gt;[[Continue on your journey.|ENDING (BOY, PASS FIRST, PASS SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 1&gt;&gt;[[Continue on your journey.|ENDING (BOY, PASS FIRST, FAIL SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 2&gt;&gt;[[Continue on your journey.|ENDING (BOY, FAIL FIRST, PASS SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 3&gt;&gt;[[Continue on your journey.|ENDING (BOY, FAIL FIRST, FAIL SECOND)]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Begin your journey." tags="Boy-Test-1" position="1300,1000">You are walking on the path toward the legendary Cavern of Souls and come across a small farm village by the name of Pinepond. You stop by some merchants to purchase food and supplies that you need and come across the most &lt;i&gt;beautiful&lt;/i&gt; woman you have ever seen. The merchant you are with tells you that she is Tindyë. You don’t pay much attention to Tindyë, but she comes over to speak to you. Tindyë starts to flirt with you and she shows great interest in you. After finding out that you are travelling to the Cavern of Souls, Tindyë says that she knows exactly how to get there and can assist you.
+
+[[Quickly leave to continue on your journey alone]]
+
+[[Take her with you on your journey]]
+
+[[Put your journey to an end to be with the living beauty Tindyë]]
+</tw-passagedata><tw-passagedata pid="11" name="You rush to escape your prison of a kingdom and venture into the outside world." tags="Girl-Test-1" position="2700,999">You are walking on the path toward the legendary Cavern of Souls and come across a small farm village by the name of Norfield. You stop by some merchants to purchase food and supplies that you need and come across the most &lt;i&gt;handsome&lt;/i&gt; man you have ever seen. The merchant you are with tells you that he is Tinioril. You don’t pay much attention to Tinioril, but he comes over to speak to you. Tinioril starts to flirt with you and he shows great interest in you. After finding out that you are travelling to the Cavern of Souls, Tinioril says that he knows exactly how to get there and can assist you.
+
+[[Quickly leave to continue on your journey alone.]]
+
+[[Take him with you on your journey]]
+
+[[Put your journey to an end to be with the living beauty Tinioril]]
+</tw-passagedata><tw-passagedata pid="12" name="Quickly leave to continue on your journey alone" tags="" position="1500,1150">You quickly take your food and supplies and scurry out of the village to continue your journey to the Cavern of Souls
+
+[[You receive a letter from Aria]]
+</tw-passagedata><tw-passagedata pid="13" name="Take her with you on your journey" tags="" position="1100,1150">You decide you need some guidance on your journey, even though you seek the Cavern of Souls to see your loved one. Will Tindyë pose a threat to your love with Aria? You continue your journey with her.
+
+[[You receive a letter from Aria]]
+
+&lt;&lt;set $points += 2&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Put your journey to an end to be with the living beauty Tindyë" tags="" position="1300,1150">You have chosen to stop your journey to be with the beautiful Tindyë. She takes you to eat at the Sunset Tavern and fall in love with her. You and Tindyë go back to her cottage, all the while forgetting about your previous love, Aria.
+</tw-passagedata><tw-passagedata pid="15" name="Take him with you on your journey" tags="" position="2500,1150">You decide you need some guidance on your journey, even though you are on the journey to the Cavern of Souls to see your loved one. Will Tinioril pose a threat to your love with Elhal? You continue your journey with him.
+
+[[You receive a letter from Elhal]]
+
+&lt;&lt;set $points += 2&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Put your journey to an end to be with the living beauty Tinioril" tags="" position="2700,1150">You have chosen to stop your journey to be with the handsome Tinioril. He takes you to eat at the Sunset Tavern and you fall in love with him. You and Tinioril go back to his cottage, all the while forgetting about your previous love, Elhal.</tw-passagedata><tw-passagedata pid="17" name="You receive a letter from Elhal." tags="" position="2700,1825">&lt;p&gt;“My dearest $name,
+		After these weeks of travel I cannot await our meeting and seeing your face for the first time. I have had a long journey making my way towards you. I stopped to help a man today. His skin was slippery like that of a fish and his eyes glistened with desire. But after filling our stomachs with a delightful dinner of fish, caught by yours truly, he was lulled to sleep and I continued my journey to you. I am propelled by the thought of seeing your beautiful eyes and finally getting to hold your hand. The man’s hand was quite weird now that I think about it. It brought forth memories from stories my mother described which told of shapeshifters. I might have narrowly avoided one. Either way, I am alive and making my way towards you. 
+
+									Your Love,
+										Elhal”&lt;/p&gt;			
+&lt;&lt;if $points eq 0&gt;&gt;[[Continue on your journey.|ENDING (GIRL, PASS FIRST, PASS SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 1&gt;&gt;[[Continue on your journey.|ENDING (GIRL, PASS FIRST, FAIL SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 2&gt;&gt;[[Continue on your journey.|ENDING (GIRL, FAIL FIRST, PASS SECOND)]]&gt;&gt;
+&lt;&lt;elseif $points eq 3&gt;&gt;[[Continue on your journey.|ENDING (GIRL, FAIL FIRST, FAIL SECOND)]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Quickly leave to continue on your journey alone." tags="" position="2900,1150">You quickly take your food and supplies and scurry out of the village to continue your journey to the Cavern of Souls
+
+[[You receive a letter from Elhal]]</tw-passagedata><tw-passagedata pid="19" name="You receive a letter from Elhal" tags="" position="2700,1300">&lt;p&gt;“My dearest $name,
+		My trip has begun and has already gotten off to an interesting start. After these first few weeks of travel, I came to a village called Pinepond to gather some supplies and food for my travels and met a woman named Tindyë. I must admit she was very beautiful but I left shortly afterwards. It feels like she was a challenge sent from the heavens! Anyways, I am very excited to see your face and I am making my way towards you at full speed. 
+									Your Love,
+									Elhal”&lt;/p&gt;							[[Continue through the forest.]]
+</tw-passagedata><tw-passagedata pid="20" name="You receive a letter from Aria" tags="letter" position="1300,1300">&lt;p&gt;“My dearest $name,
+		My trip has begun and has already gotten off to an interesting start. After these first few weeks of travel, I came to a village called Norfield to gather some supplies and food for my travels and met a man named Tinioril. I must admit he was very handsome but I left shortly afterwards. It feels like he was a challenge sent from the heavens! Anyways, I am very excited to see your face and I am making my way towards you at full speed. 
+									Your Love,
+									Aria”&lt;/p&gt;
+[[Continue onto a nearby village.]]</tw-passagedata><tw-passagedata pid="21" name="The Quest through Elerion" tags="Start-Point" position="1950,0">Welcome to the world of Elerion! What is your name, traveller? &lt;&lt;set $name to &quot;&quot;&gt;&gt; &lt;&lt;textbox &quot;$name&quot; &quot;&quot; &quot;Intro&quot;&gt;&gt; (press Enter)</tw-passagedata><tw-passagedata pid="22" name="The Gallant Gentleman" tags="" position="1300,200">Your father told you not to speak of the kingdom to the East, Thalore, even though your voice could not possibly reach across a continent to be heard there. Any word of it was met with a stern look, and another layer of bricks on the wall around the city. Despite this, he knew that you longed for more than simply to be the next king, you longed to explore the world and find what lay beyond the colossal walls surrounding Thalas. You were allowed to leave for short periods, but you were watched closely by the guards. You enjoyed watching the birds, since following their escape into the horizon was the closest you could get to being there. Sometimes you followed them on horseback, racing them to the other side of the world until the men in armor caught you. But those races were not enough.
+
+Until the hawk arrived. This bird was not seen around Thalas, and was a rarity even near the northern and southern villages. You knew this bird was an omen, and it’s message was important:
+
+[[Open the letter]]</tw-passagedata><tw-passagedata pid="23" name="The Laudable Lady" tags="" position="2700,200">Your mother told you not to mention the kingdom to the West, Thalas, though all the wives’ tales spoke of its demise at the hands of famine generations ago. Your grandmother, loving as she was, hushed you every time you spoke of going beyond the walls, even to see the droves of farmers toiling just outside. For the majority of your childhood, you remained locked within the city walls. As you grew, they seemed to gray even though the paint and ornaments grew ever brighter. There was nothing left to do, no people left to meet. The only glimpse of anything more than a lifeless life in the castle was the hawk. The hawk seemed to smile every day, and you listened to the tales of its daily flights even though it could not speak.
+
+[[Use the hawk to find any form of comfort in the outside world.]]
+
+</tw-passagedata><tw-passagedata pid="24" name="Open the letter" tags="" position="1300,350">&lt;p class = &quot;letters&quot;&gt;“Hello. I am Aria, heir to Thalore’s throne. I do not know who will find this letter, but I hope you will write back. I am desperately lonely, and wish to know of the world outside my graying city. Whoever you are, please tell me what is out there. I care not how exciting your life may be, I simply want to hear a story.”&lt;/p&gt;
+[[After reading the letter, you quickly respond]]</tw-passagedata><tw-passagedata pid="25" name="After reading the letter, you quickly respond" tags="" position="1300,500">Unbeknownst to the guards, you wrote back. The hawk took off under cover of night, and returned a week later. You told Aria of your kingdom’s vicious disdain for Thalore, and she too hid her messages from the prying eyes of her family. 
+
+[[The letters continue for some time.]]</tw-passagedata><tw-passagedata pid="26" name="The letters continue for some time." tags="body" position="1300,650">The messages persisted, and before long the hawk could not fly between the two cities quickly enough. Longing so much for a person who understood, the two of you fell in love with the words of a bright, funny, and understanding person from across the world.
+
+[[You see the hawk is a bit weighed down with the arrival of more letters.]]</tw-passagedata><tw-passagedata pid="27" name="You see the hawk is a bit weighed down with the arrival of more letters." tags="" position="1300,800">One day, the hawk arrived with two scuffed rolls of parchment instead of one. On the first, a smudged map of the continent made many years before any kings had been conceived, with two paths converging at a star in the center. On the second, Aria’s letter, shorter than the usual:
+&lt;p&gt;“The Cavern of Souls. We can be together, if that is your wish. I will leave tomorrow.”&lt;/p&gt;At dawn the next day, your bed is empty. Footsteps in the dirt lead beyond the gate of Thalas. Where do they go?
+
+[[Begin your journey.]]</tw-passagedata><tw-passagedata pid="28" name="Use the hawk to find any form of comfort in the outside world." tags="" position="2700,350">One day, you wrote a letter. Not simply a letter, but a plea for help. You sent the bird as far as it could go, hoping someone would write back to tell you of the wonders of the outside world.
+[[The hawk returns.]]</tw-passagedata><tw-passagedata pid="29" name="The hawk returns." tags="" position="2700,500">It took a week before he returned, but the attached message was well worth the wait:
+
+&lt;p&gt;“Hello. I am Elhal, prince of Thalas. I understand your plight, and I feel it as well. I am not allowed to stray far beyond my castle, but my favorite thing in the world is walking on the soil and watching the birds. Not just a few, but so many that it is dizzying. You don’t know how glad I am to find someone to talk to. Please write back soon.”&lt;/p&gt;
+
+[[You quickly respond excited that anyone responded at all.]]
+</tw-passagedata><tw-passagedata pid="30" name="You quickly respond excited that anyone responded at all." tags="" position="2700,650">Secretly, you returned the message. Your beautiful hawk flew across the world and back to the forbidden Thalas, and Elhal shared with you his struggles, which matched yours. Back and forth the stories flew, and over a year you grew attached to this wonderful person. Still desperate for someone who understood, you fell in love with the words of an observant, charming, and compassionate person from across the world. You didn’t know his face, but you didn’t need to.
+
+[[The relationship through the air continues to grow.]]</tw-passagedata><tw-passagedata pid="31" name="The relationship through the air continues to grow." tags="" position="2700,800">One day, more than a year after your first letter, Elhal’s delivery included an additional roll of wrinkled parchment. The first, a larger piece, was a map. Clearly, this one was created by ancient travelers, well before the notions of cities or even villages were born. On it are two wandering lines, meeting at a star in the middle of the continent. On the second scrap, a small note:
+&lt;p&gt;“The Cavern of Souls. Follow the path, and our spirits can meet instead of stretching so far. I am leaving tomorrow.”&lt;/p&gt;Before the sun arose, you crept out of the bed, across the main square, and under the hood of night bartered with a guard to venture outside. Why hadn’t you done this before? Now there was somewhere to go.
+
+[[You rush to escape your prison of a kingdom and venture into the outside world.]]</tw-passagedata><tw-passagedata pid="32" name="ENDING (BOY, PASS FIRST, FAIL SECOND)" tags="" position="1000,2000">You trek, alone, clutching the last few messages Aria sent. There isn’t much to see, but her letters keep you warm and happy. You remember Tindyë, how she almost distracted you from your quest. Though you are worried that this is a sign of your love’s weakness, you are confident that Aria will understand. What she might not understand is why you chose not to help the old man by the river. What were you scared of?
+
+When you reach the Cavern, you see a bright light from inside. She must already be there. You enter, and are bathed in a soft blue glow, emanating from a star-shaped stalagmite in the center of the tall, empty Cavern.
+
+As you allow the light to wash over you, the noises of gentle water and echoing wind become quieter. Your feet no longer sense the ground. When you look down, you see your own body sink to the floor, an evanescent wisp floating below you. Your spirit escapes your body completely, and as it does, you hear a voice:
+
+“$name, is that you? Why can’t I see you? What happened?”
+
+You can hear Aria’s voice, but her appearance is forever unknown to you. You talk and talk, but your eternal whispers are answered by the disembodied voice of Aria. Hopefully that is enough.</tw-passagedata><tw-passagedata pid="33" name="ENDING (BOY, FAIL FIRST, PASS SECOND)" tags="" position="1200,2000">Tindyë keeps you company, but as the two of you continue to walk you begin to realize the strangeness of your situation. A good man, willing to go out of his way to help a man in need, meeting another woman on his way to meet his true love. What is going on? Do you know this little about love?
+
+You continue to talk to Tindyë, but the conversation grows dry. This never happened with Aria. You feel sure of your love for her now, and nothing can stop you from reaching the Cavern. Not even this strange woman, who gives you nothing but a pretty face to look at.
+
+The path finally leads to the Cavern. You don’t need to ask Tindyë to leave; she realizes that whatever it is you hope to find inside, it is worth much more to you than she is. She goes on her way.
+
+When you reach the Cavern, you see a bright light from inside. Aria must already be there. You enter, and are bathed in a soft blue glow, emanating from a star-shaped stalagmite in the center of the tall, empty Cavern.
+
+As you allow the light to wash over you, the noises of gentle water and echoing wind become quieter. Your feet no longer sense the ground. When you look down, you see your own body sink to the floor, an evanescent wisp floating below you. Your spirit escapes your body completely, and as it does, you hear a voice:
+
+“$name, is that you? Why can’t I see you? What happened?”
+
+You can hear Aria’s voice, but her appearence is forever unknown to you. All you can see is Tindyë. You talk and talk, but your eternal whispers are answered by the disembodied voice of Aria while your mind can only see another. Hopefully that is enough.
+</tw-passagedata><tw-passagedata pid="34" name="ENDING (BOY, PASS FIRST, PASS SECOND)" tags="" position="1400,2000">“You are a happy spirit. Along your travels, you evaded the challenges presented, and showed your good nature. You cannot be defeated by such simple things as lust and selfishness. When you see Aria, she will fall into your arms. Don’t be afraid. Go in.”
+
+You whisper these words to yourself as you wait outside the Cavern, waiting for Aria but afraid to see what lays inside. What if she wishes she had never seen the real you? This entire journey, this entire life may have been a waste.
+
+Just as you prepare to stride into the entrance, you hear a delicate pitter-patter of steps. You turn around, and lay your eyes on a beautiful girl, just as wonderful as the words on each of her letters over the many months and years.
+
+“$name?” she asks.
+
+You nod, smiling. The two of you take each other’s hands, enter the Cavern and wait for something to happen. A glow slowly emerges, bathing the two of you in a blue light. Slowly, you feel her grip begin to fade. You turn to see her, and find a shimmering spirit floating away from her body. Your hands stay connected, and your voices keep each other safe.
+</tw-passagedata><tw-passagedata pid="35" name="ENDING (BOY, FAIL FIRST, FAIL SECOND)" tags="" position="1600,2000">“Why would she want to be with you? You are an awful person. You are with another woman, and couldn’t be bothered to help an old man in desperate need of it. You should turn back.”
+
+These are not the words you should be thinking to yourself as you follow the map to the Cavern of Souls. Tindyë should not be here, but for some reason you cannot bring yourself to ask her to go. The two of you continue your walk, and slowly your path veers from the map’s guidance. You cannot control yourself, but you know that your feet are right to turn you around. Your letters to Aria may have reached her heart, but the real you would drive her away immediately. Tindyë follows quietly, but even she isn’t much comfort. You are alone.</tw-passagedata><tw-passagedata pid="36" name="ENDING (GIRL, PASS FIRST, FAIL SECOND)" tags="" position="2325,2000">You trek, alone, clutching the last few messages Elhal sent. There isn’t much to see, but his letters keep you warm and happy. You remember Tinioril, how he almost distracted you from your quest. Though you are worried that this is a sign of your love’s weakness, you are confident that Elhal will understand. What he might not understand is why you chose not to help the old man by the river. What were you scared of?
+
+When you reach the Cavern, you see a bright light from inside. He must already be there. You enter, and are bathed in a soft blue glow, emanating from a star-shaped stalagmite in the center of the tall, empty Cavern.
+
+As you allow the light to wash over you, the noises of gentle water and echoing wind become quieter. Your feet no longer sense the ground. When you look down, you see your own body sink to the floor, an evanescent wisp floating below you. Your spirit escapes your body completely, and as it does, you hear a voice:
+
+“$name, is that you? Why can’t I see you? What happened?”
+
+You can hear Elhal’s voice, but his appearence is forever unknown to you. You talk and talk, but your eternal whispers are answered by a disembodied, beautiful voice.
+</tw-passagedata><tw-passagedata pid="37" name="ENDING (GIRL, FAIL FIRST, PASS SECOND)" tags="" position="2500,2000">Tinioril keeps you company, but as the two of you continue to walk you begin to realize the strangeness of your situation. A caring woman, willing to go out of her way to help a man in need, meeting another man on his way to meet her true love. What is going on? Do you know this little about love?
+
+You continue to talk to Tinioril, but the conversation grows dry. This never happened with Elhal. You feel sure of your love for him now, and nothing can stop you from reaching the Cavern. Not even this strange man, who gives you nothing but a handsome face to look at.
+
+The path finally leads to the Cavern. You don’t need to ask Tinioril to leave; he realizes that whatever it is you hope to find inside, it is worth much more to you than he is. He goes on his way.
+
+When you reach the Cavern, you see a bright light from inside. Elhal must already be there. You enter, and are bathed in a soft blue glow, emanating from a star-shaped stalagmite in the center of the tall, empty Cavern.
+
+As you allow the light to wash over you, the noises of gentle water and echoing wind become quieter. Your feet no longer sense the ground. When you look down, you see your own body sink to the floor, an evanescent wisp floating below you. Your spirit escapes your body completely, and as it does, you hear a voice:
+
+“$name, is that you? Why can’t I see you? What happened?”
+
+You can hear Elhal’s voice, but her appearence is forever unknown to you. All you can see is Tinioril, and your mind can remember his face and nothing else. You talk and talk, but your eternal whispers are answered only by the disembodied voice of Elhal. Hopefully that is enough.
+</tw-passagedata><tw-passagedata pid="38" name="ENDING (GIRL, PASS FIRST, PASS SECOND)" tags="" position="2900,2000">“You are a happy spirit. Along your travels, you evaded the challenges presented, and showed your good nature. You cannot be defeated by such simple things as lust and selfishness. When you see Elhal, he will fall into your arms. Don’t be afraid. Go in.”
+
+You whisper these words to yourself as you wait outside the Cavern, waiting for Elhal but afraid to see what lays inside. What if he wishes he had never seen the real you? This entire journey, this entire life may have been a waste.
+
+Just as you prepare to stride into the entrance, you hear a careful pitter-patter of steps. You turn around, and lay your eyes on a smiling, handom man, just as wonderful as the words on each of his letters over the many months and years.
+
+“$name?” he asks.
+
+You nod, smiling. The two of you take each other’s hands, enter the Cavern and wait for something to happen. A glow slowly emerges, bathing the two of you in a blue light. Slowly, you feel his grip begin to fade. You turn to see him, and find a shimmering spirit floating away from him body. Your hands stay connected, and your voices keep each other safe.
+</tw-passagedata><tw-passagedata pid="39" name="ENDING (GIRL, FAIL FIRST, FAIL SECOND)" tags="" position="3100,2000">“Why would he want to be with you? You are an awful person. You are with another man, and couldn’t be bothered to help another person in desperate need of it. You should turn back.”
+
+These are not the words you should be thinking to yourself as you follow the map to the Cavern of Souls. Tinioril should not be here, but for some reason you cannot bring yourself to ask him to go. The two of you continue your walk, and slowly your path veers from the map’s guidance. You cannot control yourself, but you know that your feet are right to turn you around. Your letters to Elhal may have reached his heart, but the real you would drive him away immediately. Tinioril follows quietly, but even he isn’t much comfort. You are alone.
+</tw-passagedata><tw-passagedata pid="40" name="Intro" tags="" position="1950,150">Elerion is filled with many magical creatures and surprises around every corner. You&#x27;re quest is to journey through Elerion and meet up with your potential lover from the other side of the world.
+
+Who will you play as?
+
+[[The Gallant Gentleman]]
+
+[[The Laudable Lady]]
+
+&lt;&lt;set $points to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Continue on your journey with Tinioril." tags="" position="3000,1500">You are traveling down your path in deep conversation with Tinioril. You are so busy laughing at his goblin impressions that you almost miss the crippled, old man crouching near the bank of the river. He raises his hand as if to catch your attention. As you approach him you see the hand he beckoned you over with appears to be peeling, but you decide this was just the sun’s rays bouncing off of the river and messing with your sight. Tinioril grabs your arm as if to doubt your decision to approach the man and make you reevaluate the situation. When you get near, he tells you that his village has been destroyed by a horde of goblins terrorizing the area and has been wandering around looking for food since then. You look towards Tinioril with any hope he knows the right thing to do.
+
+[[You offer your help by applying your quick thinking skills to create a fishing pole.]]
+
+[[You offer your help by searching through the bushes for food.]]
+
+[[You take Tinioril and guide away from the man and continue on your path.]]</tw-passagedata><tw-passagedata pid="42" name="You continue to a nearby village with Tindyë" tags="" position="1025,1500">You both come across a village overrun with goblins. They are burning the homes, stealing from the shops, and terrorizing the fleeing villagers. A villager sees you and begs for your help. Tindyë sees their fear and clutches to your arm.
+
+[[You pick up a pitchfork.]]
+
+[[You pick up a torch.]]
+
+[[You and Tindyë continue along.]]</tw-passagedata><tw-passagedata pid="43" name="You offer your help by applying your quick thinking skills to create a fishing pole." tags="" position="3000,1650">After deciding to help this man, you think back to the days when you would walk through the forest with your mother in order to pick herbs for supper that night. You remember the time you found delicious mushrooms with red spots and the purple berries that tasted sweeter than honey. Using those images, you search through the forest in hopes of finding such food. Tinioril watches the man beginning to change shape and takes the opportunity while your back is turned to flee. As your back is turned towards the nearby bushes, you hear the sound of fabric ripping and a slimy object moving. You turn quickly back around to examine what is happening as you notice the man’s clothes are now ten sizes too small and his skin is falling off of his own body. He shapeshifts into an orc and starts swinging his huge fists. You try to run but trip over a fallen branch. The orc takes advantage of the situation and grabs you by the leg, bringing you to his eye sight, and snaps you in half. He uses your lifeless body as his supper, changing back into the man, and continues about his night. 
+
+[[You receive a letter from Elhal.]]</tw-passagedata><tw-passagedata pid="44" name="You offer your help by searching through the bushes for food." tags="" position="2800,1650">You survey the area trying to find anything with which to help this poor gentleman. You see a sturdy branch, and by pulling a thread from his cloak, you fashion a rudimentary fishing line. The man flinches when you raise the fishing pole in order to catch some food, but you think nothing of it. Tinioril glares at the man but goes into the forest to scavenger for any bugs that could potentially be used as bait. You sit near the river bank and talk with the man for a few hours before a fish catches hold, while Tinioril sits a few paces back weaving baskets and singing to himself. You drag the thread with the fish and place it in one of Tinioril’s expertly woven baskets. Tinioril begins to fashion a fire from the dry moss and a couple of rocks. You prepare the fish and sit down to a lovely dinner with the man and Tinioril.  He tells you of tales from his adventures and the tragic story as he arrived to his village too late to save it. You thank the man for his time and approach your original path in order to continue your journey.
+
+[[You receive a letter from Elhal.]]
+</tw-passagedata><tw-passagedata pid="45" name="You take Tinioril and guide away from the man and continue on your path." tags="" position="3200,1650">Thinking back to the many stories of foolish women getting caught up in the thought of helping those in need, but soon after getting murdered for their help, you back away from the man offering nothing. He starts mumbling curses under his breath, but you think nothing of it and continue on your path with Tinioril. 
+
+[[You receive a letter from Elhal.]]</tw-passagedata><tw-passagedata pid="46" name="You pick up a pitchfork." tags="" position="875,1650">You discover a pitchfork from an abandoned farm, while Tindyë searches for a weapon with which to fight alongside you. She unearthed a hoe in the same field which was left after a farmer fled for his life from the horrible goblin horde and proceeded to run to your side. You fight back to back with Tindyë for hours hitting every goblin that dares to come within your combined swinging radius. Every strike lands as you thrust your pitchfork deep into their guts. You hear Tindyë’s grunt and release hearty battle cries as she swings quick and low decapitating the vicious little beasts. You start to recognize the swarm is diminishing in size and a last minute rush of adrenaline encourages your already exhausted body to maim the two goblins in front of you with one swift movement running the pitchfork through both of their abdomens. The few remaining goblins see this final act of the rampage and flee hoping to attack a less defended village. The townspeople jump for joy seeing the final goblin flee from their fields. They thank you for your valiant effort and host a celebration in yours and Tindyë’s honor and begin to pick up their broken villager in hopes of restoring it to its former glory.
+
+[[You receive a letter from Aria.]]
+</tw-passagedata><tw-passagedata pid="47" name="You pick up a torch." tags="" position="1025,1650">You can’t bear to see so many other beings suffer at the hand of such miserable creatures. You pick up a nearby flaming rafter which had fallen from the stable. You starting swinging your torch-like device attempting to hit any goblin nearby, but barely striking one. Tindyë sees the beginning of an enormous defeat and fleas immediately. The goblin horde realizes this new attacker and begins to target you. Forty or so goblins run after you leaping and latching onto your clothes. They drag their nails across your skin and claw at your eyeballs. You bleed to death in the middle of the village. The villagers thank you for your valiant effort in the battle and give you a properly burial filled with songs, dance, and toasts of respect. 
+
+[[You receive a letter from Aria.]]
+</tw-passagedata><tw-passagedata pid="48" name="You and Tindyë continue along." tags="" position="1175,1650">You don’t have the time to stop and help the villagers. You are just focused on finding your Aria on the other side of Elerion. You drag Tindyë away from the villager and back towards the path. You just walk and talk, getting closer to Tindyë with every step.
+
+[[You receive a letter from Aria.]]</tw-passagedata></tw-storydata>
