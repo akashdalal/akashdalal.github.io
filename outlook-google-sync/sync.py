@@ -127,19 +127,18 @@ class OutlookClient:
         Returns:
             (events, new_delta_link)
 
-        On the first call (delta_link=None) a full sync of the next
-        SYNC_DAYS days is performed.  Every subsequent call uses the
-        delta link so only changes are returned.
+        On the first call (delta_link=None) a full sync of ALL events
+        is performed (10 years back through 10 years ahead).  Every
+        subsequent call uses the delta link so only changes are returned.
         """
-        sync_days = int(os.getenv("SYNC_DAYS", "60"))
-
         if delta_link:
             url: Optional[str] = delta_link
         else:
             now = datetime.now(timezone.utc)
-            end = now + timedelta(days=sync_days)
+            start = now - timedelta(days=365 * 10)   # 10 years back
+            end = now + timedelta(days=365 * 10)     # 10 years ahead
             params = (
-                f"?startDateTime={now:%Y-%m-%dT%H:%M:%SZ}"
+                f"?startDateTime={start:%Y-%m-%dT%H:%M:%SZ}"
                 f"&endDateTime={end:%Y-%m-%dT%H:%M:%SZ}"
                 "&$select=id,subject,body,start,end,location,"
                 "isAllDay,isCancelled,organizer,attendees,type,seriesMasterId"

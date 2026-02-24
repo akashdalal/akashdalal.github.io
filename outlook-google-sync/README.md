@@ -142,13 +142,12 @@ nohup python sync.py >> sync.log 2>&1 &
 | `GOOGLE_CREDENTIALS_FILE` | `google_credentials.json` | Path to Google OAuth JSON |
 | `TARGET_CALENDAR_NAME` | `Outlook Sync` | Google Calendar to write into |
 | `SYNC_INTERVAL_SECONDS` | `60` | Seconds between syncs |
-| `SYNC_DAYS` | `60` | Days ahead to sync on first run |
 
 ---
 
 ## Notes
 
 - Events are **read-only mirrored** — changes made in the Google "Outlook Sync" calendar are not written back to Outlook.
-- The delta query only fetches events within the `SYNC_DAYS` window set on the first run. To extend the window, delete `sync_data/delta_link.json` to force a fresh full sync.
+- The initial full sync covers all events 10 years back through 10 years ahead. To re-run a full sync, delete `sync_data/delta_link.json`.
 - Cancellations and deletions in Outlook are propagated to Google.
 - `sync_data/` should not be committed to version control — it contains OAuth tokens.
