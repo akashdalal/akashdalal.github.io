@@ -1,0 +1,5 @@
+sync_data/
+.env
+google_credentials.json
+__pycache__/
+*.pyc
