@@ -1,0 +1,38 @@
+name: Calendar Bridge Sync
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # runs every 15 minutes
+  workflow_dispatch:           # lets you trigger it manually from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r calendar-bridge/requirements.txt
+
+      - name: Write Google credentials file
+        run: |
+          mkdir -p calendar-bridge/bridge_data
+          echo '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > calendar-bridge/google_credentials.json
+          echo '${{ secrets.GOOGLE_TOKEN_JSON }}'       > calendar-bridge/bridge_data/google_token.json
+
+      - name: Run sync (once)
+        env:
+          ICS_URL: ${{ secrets.ICS_URL }}
+          GOOGLE_CREDENTIALS_FILE: google_credentials.json
+          TARGET_CALENDAR_NAME: ${{ vars.TARGET_CALENDAR_NAME || 'Outlook (Work)' }}
+          DAYS_PAST: ${{ vars.DAYS_PAST || '30' }}
+          DAYS_FUTURE: ${{ vars.DAYS_FUTURE || '365' }}
+        working-directory: calendar-bridge
+        run: python bridge.py --once

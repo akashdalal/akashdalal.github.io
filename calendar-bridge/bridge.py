@@ -406,6 +406,20 @@ def _preflight():
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Calendar Bridge")
+    parser.add_argument(
+        "--once",
+        action="store_true",
+        help="Run a single sync then exit (used by GitHub Actions)",
+    )
+    args = parser.parse_args()
+
     if not _preflight():
         raise SystemExit(1)
-    CalendarBridge().run()
+
+    bridge = CalendarBridge()
+    if args.once:
+        bridge.sync()
+    else:
+        bridge.run()
